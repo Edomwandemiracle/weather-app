@@ -28,7 +28,6 @@ export class ReportComponent implements OnInit {
         data: [this.min_temp, this.max_temp, this.feel_temp],
         label: 'My First dataset',
       },
-      // { data: [], label: 'My Second dataset' },
     ];
     this.getData.weather.filter((obs) => {
       switch (obs.icon) {
@@ -83,11 +82,6 @@ export class ReportComponent implements OnInit {
   public chartLabels: Array<any> = ['Min-temp', 'Max-temp', 'Feels-like'];
 
   public chartColors: Array<any> = [
-    // {
-    //   backgroundColor: 'rgba(105, 0, 132, .2)',
-    //   borderColor: 'rgba(200, 99, 132, .7)',
-    //   borderWidth: 2,
-    // },
     {
       backgroundColor: 'rgba(0, 137, 132, .2)',
       borderColor: 'rgba(0, 10, 130, .3)',
