@@ -1,0 +1,41 @@
+<div class="full-page">
+
+  <div class="caard p-3" style="color: #000000;">
+    <p class="text-center m-0 cityName">{{getData.name}}</p>
+
+    <div class="" *ngFor="let item of getData.weather">
+      <div class="d-flex justify-content-center">
+        <img src={{img}} alt="" style="width: 160px;">
+      </div>
+      <div class="d-flex justify-content-center">
+        <p class="temp" style="font-size: 24px;">{{getData.main['temp']}}<span class="ml-2">&#8451;</span></p>
+      </div>
+      <div class="">
+        <p class="text-center">{{item.main}}</p>
+      </div>
+    </div>
+
+
+
+
+    <!-- </div> -->
+
+    <div class="mb-3" style="display: block">
+      <canvas mdbChart [chartType]="chartType" [datasets]="chartDatasets" [labels]="chartLabels" [colors]="chartColors"
+        [options]="chartOptions" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+
+
+    <div class="row">
+      <div class="col-6">
+        <p class="mb-1 item ml-3">Humidity</p>
+        <p class="ml-4">{{getData.main['humidity']}} %</p>
+      </div>
+      <div class="col-6">
+        <p class="mb-1 item ml-3 ">Wind speed</p>
+        <p class="ml-4">{{getData.wind['speed']}} km/j</p>
+      </div>
+    </div>
+  </div>
+</div>
