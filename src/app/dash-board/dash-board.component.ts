@@ -16,7 +16,7 @@ export class DashBoardComponent implements OnInit {
   }
 
   getWeatherReport() {
-    const cities = ['London', 'Paris', 'Lagos'];
+    const cities = ['London', 'Paris', 'Lagos', 'Benin'];
     cities.filter((city) => {
       this.baseService.get(city).subscribe(
         (obs) => {
