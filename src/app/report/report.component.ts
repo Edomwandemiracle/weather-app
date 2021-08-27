@@ -10,10 +10,10 @@ export class ReportComponent implements OnInit {
   @Input() data: any;
   getData: any;
   img: string;
-  max_temp: any = 0;
-  min_temp: any = 0;
+  max_temp: number = 0;
+  min_temp: number = 0;
   chartDatasets: any;
-  feel_temp: any;
+  feel_temp: number = 0;
   constructor(private baseService: BaseAppService) {}
 
   ngOnInit(): void {}
